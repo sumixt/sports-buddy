@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f5fa;
+  margin: 0;
+  padding: 20px;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+h1 { text-align: center; color: #2d89ff; }
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tabs button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  cursor: pointer;
+}
+.tabs button.active {
+  background: #2d89ff;
+  color: #fff;
+  border-color: #2d89ff;
+}
+
+.section { padding: 10px; }
+.auth input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0;
+}
+button {
+  cursor: pointer;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #2d89ff;
+  color: white;
+  transition: 0.2s;
+}
+button:hover { background: #1b6cd9; }
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+.card {
+  background: #f9fbff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eef3ff;
+}
+.event {
+  border: 1px dashed #ccc;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+}

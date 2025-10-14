@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Buddy</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Sports Buddy</h1>
+
+    <div class="tabs">
+      <button id="tab-user" class="active">User</button>
+      <button id="tab-admin">Admin</button>
+    </div>
+
+    <!-- USER SECTION -->
+    <div id="user-section" class="section">
+      <h2>User — Register / Login</h2>
+      <div class="auth">
+        <input id="user-email" type="email" placeholder="Email" />
+        <input id="user-pass" type="password" placeholder="Password" />
+        <button id="btn-register">Register</button>
+        <button id="btn-login">Login</button>
+        <button id="btn-logout" style="display:none;">Logout</button>
+      </div>
+
+      <hr />
+      <h3>Find Events Near You</h3>
+      <div class="filters">
+        <select id="filter-city"><option value="">-- Select City --</option></select>
+        <select id="filter-area"><option value="">-- Select Area --</option></select>
+        <select id="filter-sport"><option value="">-- Select Sport --</option></select>
+        <button id="btn-filter">Search</button>
+      </div>
+      <div id="events-list"></div>
+    </div>
+
+    <!-- ADMIN SECTION -->
+    <div id="admin-section" class="section" style="display:none;">
+      <h2>Admin — Manage Sports & Events</h2>
+      <div class="admin-grid">
+        <div class="card">
+          <h4>Add / Update Sport</h4>
+          <input id="sport-name" placeholder="Sport name" />
+          <button id="btn-add-sport">Add Sport</button>
+        </div>
+
+        <div class="card">
+          <h4>Add City / Area</h4>
+          <input id="city-name" placeholder="City name" />
+          <input id="area-name" placeholder="Area name" />
+          <button id="btn-add-city-area">Add City+Area</button>
+        </div>
+
+        <div class="card">
+          <h4>Add Event</h4>
+          <input id="event-name" placeholder="Event name" />
+          <input id="event-sport" placeholder="Sport name" />
+          <input id="event-city" placeholder="City" />
+          <input id="event-area" placeholder="Area" />
+          <input id="event-date" type="date" />
+          <input id="event-time" type="time" />
+          <input id="event-level" placeholder="Skill level (Beginner/Intermediate/Pro)" />
+          <button id="btn-add-event">Add Event</button>
+        </div>
+      </div>
+
+      <hr />
+      <h3>Existing Events</h3>
+      <div id="admin-events"></div>
+    </div>
+  </div>
+
+  <script src="firebase-config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
