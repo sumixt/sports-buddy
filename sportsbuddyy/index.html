@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Buddy</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sports Buddy 🏏</h1>
+    <p>Find or Add Sports Events Near You</p>
+
+    <form id="eventForm">
+      <input type="text" id="city" placeholder="Enter City" required />
+      <input type="text" id="area" placeholder="Enter Area" required />
+      <input type="text" id="sport" placeholder="Enter Sport" required />
+      <input type="text" id="time" placeholder="Enter Time (e.g. 5 PM)" required />
+      <button type="submit">Add Event</button>
+    </form>
+
+    <h2>Available Events</h2>
+    <ul id="eventsList"></ul>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
